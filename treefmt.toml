@@ -1,3 +1,8 @@
 [formatter.alejandra]
 command = "alejandra"
 includes = ["*.nix"]
+
+[formatter.taplo]
+command = "taplo"
+options = ["fmt"]
+includes = ["*.toml"]

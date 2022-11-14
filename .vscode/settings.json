@@ -1,14 +1,24 @@
 {
   "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+  /*
+  "antlr4.generation": {
+    "mode": "external",
+    "language": "Python3"
+  },
+  */
   "customLocalFormatters.formatters": [
     {
       "command": "treefmt -q --stdin ${file}",
       "languages": [
         "nix",
+        "toml"
       ]
     }
   ],
   "[nix]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[toml]": {
     "editor.defaultFormatter": "jkillian.custom-local-formatters"
   },
 }

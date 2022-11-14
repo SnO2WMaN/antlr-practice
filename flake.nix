@@ -12,7 +12,7 @@
     flake-utils,
     ...
   } @ inputs:
-    flake-utils.lib.eachDefaultSystem   (
+    flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = import nixpkgs {
           inherit system;
@@ -25,7 +25,15 @@
           packages = with pkgs; [
             alejandra
             treefmt
+            taplo-cli
             antlr
+            jdk11
+          ];
+          env = with pkgs; [
+            {
+              name = "JAVA_HOME";
+              value = jdk11.home;
+            }
           ];
         };
       }
