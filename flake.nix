@@ -28,6 +28,7 @@
             taplo-cli
             antlr
             jdk11
+            deno
           ];
           env = with pkgs; [
             {
