@@ -1,6 +1,6 @@
 import { oakCors } from "cors/mod.ts";
 import { Application, Router } from "oak/mod.ts";
-import { tokenize } from "./grammars/untyped_lambda.ts";
+import { tokenize as tokenizeUntypedLambda } from "./grammars/untyped_lambda/mod.ts";
 
 const app = new Application();
 const router = new Router();
@@ -11,7 +11,7 @@ router.post("/lambda", async ({ request, response }) => {
     return;
   }
   const input = await request.body({ type: "text" }).value;
-  const tokenized = tokenize(input);
+  const tokenized = tokenizeUntypedLambda(input);
 
   response.status = 200;
   response.body = tokenized;

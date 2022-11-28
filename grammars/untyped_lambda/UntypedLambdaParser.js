@@ -1,4 +1,4 @@
-// Generated from /home/sno2wman/src/ghq/github.com/SnO2WMaN/antlr-practice/grammars/UntypedLambda.g4 by ANTLR 4.9.2
+// Generated from /home/sno2wman/src/ghq/github.com/SnO2WMaN/antlr-practice/grammars/untyped_lambda/UntypedLambda.g4 by ANTLR 4.9.2
 // jshint ignore: start
 import antlr4 from 'antlr4';
 import UntypedLambdaListener from './UntypedLambdaListener.js';
