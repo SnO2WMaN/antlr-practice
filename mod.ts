@@ -5,6 +5,11 @@ import { tokenize as tokenizeUntypedLambda } from "./grammars/untyped_lambda/mod
 const app = new Application();
 const router = new Router();
 
+router.get("/", ({ response }) => {
+  response.redirect("https://github.com/SnO2WMaN/deadsimple-antlr-tokenizer");
+  return;
+});
+
 router.post("/lambda", async ({ request, response }) => {
   if (!request.hasBody) {
     response.status = 400;
