@@ -2,6 +2,7 @@
   "importMap": "./import_map.json",
   "tasks": {
     "start": "deno run -A --unstable ./mod.ts",
+    "dev": "deno run -A --watch --unstable ./mod.ts",
     "debug": "deno run --inspect-brk -A --unstable ./mod.ts",
     "test": "deno test",
     "lint": "deno lint"
@@ -9,7 +10,7 @@
   "lint": {
     "files": {
       "exclude": [
-        "./grammars/*.js"
+        "./grammars/**/*.js"
       ]
     }
   },
@@ -23,7 +24,7 @@
     "files": {
       "exclude": [
         "./lock.json",
-        "./grammars/*.js"
+        "./grammars/**/*.js"
       ]
     }
   }

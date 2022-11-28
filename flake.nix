@@ -29,6 +29,7 @@
             antlr
             jdk11
             deno
+            httpie
           ];
           env = with pkgs; [
             {
