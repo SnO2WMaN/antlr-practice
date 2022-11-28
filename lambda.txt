@@ -1,1 +1,4 @@
-λt.λf.t
+(λx.x λt.λf.t)
+(λy.y λs.λz.(s z))
+λs.λz.(s (s (s (s z))))
+((λx.λy.x x) y)

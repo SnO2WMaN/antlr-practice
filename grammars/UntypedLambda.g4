@@ -1,12 +1,13 @@
 grammar UntypedLambda;
 
-file: expr EOF;
+file: expr+ EOF;
 
 VARIABLE: [a-z];
 
 vari: VARIABLE;
 func: 'λ' vari '.' expr;
-appl: '(' expr expr ')';
+appl: '(' expr ' ' expr ')';
 
 expr: vari | func | appl;
 
+WS: [\t\r\n] -> skip;
